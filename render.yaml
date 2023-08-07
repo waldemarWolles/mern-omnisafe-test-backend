@@ -1,0 +1,18 @@
+# render.yaml
+
+# Specify the build command
+buildCommand: npm install 
+
+# Specify the start command
+startCommand: npm start
+
+# Specify the services
+services:
+  - name: web
+    env: nodejs
+    plan: Individual
+
+# Specify the routes
+routes:
+  - path: /
+    destination: web
